@@ -18,7 +18,7 @@ class CustomTextField extends StatefulWidget {
     this.customColor = const Color(0xFF0292B7),
   });
 
-  late TextEditingController _textEditingController;
+  TextEditingController _textEditingController = TextEditingController();
   late ValueChanged<String>? onChanged;
   final ValueChanged<bool>? onFocusChanged; // Callback for focus change
 

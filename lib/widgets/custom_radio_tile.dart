@@ -7,10 +7,9 @@ class CustomRadioListTile extends StatelessWidget {
   final ValueChanged<String?> onChanged;
   final String title;
   final Color fillColor;
-  final bool isTextFiled;
+
   final double width;
   final String fieldText;
-  final Widget singleWidget;
 
   const CustomRadioListTile({
     super.key,
@@ -20,8 +19,6 @@ class CustomRadioListTile extends StatelessWidget {
     required this.title,
     this.fillColor = Colors.black,
     this.fieldText = "",
-    this.singleWidget = const Text(''),
-    required this.isTextFiled,
     required this.width,
   });
 
@@ -29,14 +26,13 @@ class CustomRadioListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * width,
-      child: ListTile(
-        leading: Radio<String>(
-          fillColor: WidgetStatePropertyAll(fillColor),
-          value: value,
-          groupValue: groupValue,
-          onChanged: onChanged,
-        ),
-        title: isTextFiled ? singleWidget : Text(title),
+      child: RadioListTile(
+        value: value,
+        visualDensity: VisualDensity.compact,
+        title: Text(title),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 0),
+        groupValue: groupValue,
+        onChanged: onChanged,
       ),
     );
   }

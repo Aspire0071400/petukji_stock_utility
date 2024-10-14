@@ -8,14 +8,13 @@ import 'package:petukji_stock_utility/widgets/custom_elevated_button.dart';
 import 'package:petukji_stock_utility/widgets/custom_text_field.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  
   final AuthService _authService = AuthService();
   bool isOtpSent = false;
   bool isLoading = false;
@@ -28,14 +27,12 @@ class _LoginPageState extends State<LoginPage> {
   late CustomTextField otpTextFiled;
   late CustomTextField phoneTextField;
 
-
 //dispose method
   @override
   void dispose() {
     timer?.cancel();
     super.dispose();
   }
-
 
 //START TIMER MEHOD
   void startTimer() {
@@ -63,7 +60,6 @@ class _LoginPageState extends State<LoginPage> {
     });
     timer?.cancel();
   }
-
 
 //SEND OTP METHOD
   Future<void> sendOTP() async {
@@ -183,8 +179,6 @@ class _LoginPageState extends State<LoginPage> {
   //BUILD METHOD
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -216,7 +210,6 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     const SizedBox(height: 100),
-                  
 
                     //PHONE TEXTFIELD
                     phoneTextField,

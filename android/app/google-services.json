@@ -7,25 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:623957445835:android:d78e82afa36ec660021f4e",
-        "android_client_info": {
-          "package_name": "com.example.petukji_stock"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAa19p3miMn0BKt4QO5umD9QmWmcg1Y7Ko"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:623957445835:android:85e4fa4ca2d0331d021f4e",
         "android_client_info": {
           "package_name": "com.example.petukji_stock_utility"

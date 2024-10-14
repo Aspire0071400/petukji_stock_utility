@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:petukji_stock_utility/firebase_options.dart';
+import 'package:petukji_stock_utility/screens/auth/login_page.dart';
 import 'package:petukji_stock_utility/screens/trade_setup.dart';
 
 void main() async {
@@ -21,6 +23,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const TradeSetup());
+        home: const LoginPage());
   }
 }

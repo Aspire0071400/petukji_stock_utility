@@ -9,6 +9,7 @@ class CustomTextField extends StatefulWidget {
     this.labletext = "",
     this.defaultValue = "",
     this.multiLine = 1,
+    this.suffixText = "",
     this.readOnly = false,
     this.isNumberOnly = false,
     this.maxlengthChar = 200,
@@ -26,6 +27,7 @@ class CustomTextField extends StatefulWidget {
   String hinttext = "";
   String labletext = "";
   String txt = "";
+  String suffixText = "";
   String defaultValue = "";
   String keyName;
   int multiLine = 1;
@@ -124,6 +126,7 @@ class _CustomTextField extends State<CustomTextField> {
                 ]
               : null,
           decoration: InputDecoration(
+            suffixText: widget.suffixText,
             border: OutlineInputBorder(
               borderSide: BorderSide(color: widget.customColor, width: 2),
               borderRadius: BorderRadius.circular(8.0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petukji_stock_utility/screens/trade_setup.dart';
 
 class DisclaimerPage extends StatefulWidget {
   const DisclaimerPage({super.key});
@@ -56,7 +57,7 @@ class _DisclaimerPageState extends State<DisclaimerPage> {
                   value: isChecked,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked = value ?? false;  // Update checkbox state
+                      isChecked = value ?? false; // Update checkbox state
                     });
                   },
                 ),
@@ -78,10 +79,17 @@ class _DisclaimerPageState extends State<DisclaimerPage> {
                           content: Text("Login successful!"),
                         ),
                       );
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TradeSetup(),
+                        ),
+                      );
                     }
-                  : null,  // Disable button when checkbox is unchecked
+                  : null, // Disable button when checkbox is unchecked
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 40.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 16.0, horizontal: 40.0),
                 backgroundColor: Colors.black,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
